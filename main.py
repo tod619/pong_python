@@ -15,20 +15,13 @@ screen.tracer(0)
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
 
-
-# def go_up():
-#     new_y = paddle.ycor() + 20
-#     paddle.goto(paddle.xcor(), new_y)
-
-
-# def go_down():
-#     new_y = paddle.ycor() - 20
-#     paddle.goto(paddle.xcor(), new_y)
-
-
 screen.listen()
-# screen.onkey(go_up, "Up")
-# screen.onkey(go_down, "Down")
+# Move the Right Paddle
+screen.onkey(r_paddle.go_up, "Up")
+screen.onkey(r_paddle.go_down, "Down")
+# Move the Left Paddle
+screen.onkey(l_paddle.go_up, "w")
+screen.onkey(l_paddle.go_down, "s")
 
 game_is_on = True
 
