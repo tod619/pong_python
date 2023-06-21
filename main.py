@@ -3,6 +3,7 @@
 # 21/06/2023
 from turtle import Screen, Turtle
 from paddle import Paddle
+from ball import Ball
 
 # Set up the screen
 screen = Screen()
@@ -14,6 +15,7 @@ screen.tracer(0)
 # Create the paddle
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
+ball = Ball()
 
 screen.listen()
 # Move the Right Paddle
